@@ -262,24 +262,28 @@
     </footer>
 
     <!-- Font Awesome for social icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
  <script>
-        window.addEventListener('load', function(ev) {
-            //loading my code
-            let loading = document.querySelector('#loading');
-            // Download main.dart.js
-            _flutter.loader.loadEntrypoint({
-                serviceWorker: {
-                    serviceWorkerVersion: serviceWorkerVersion,
-                },
-                onEntrypointLoaded: function(engineInitializer) {
-                    engineInitializer.initializeEngine().then(function(appRunner) {
-                        loading.remove();
-                        appRunner.runApp();
-                    });
-                }
-            });
-        });
+ window.addEventListener('load', function() {
+	    let loading = document.querySelector('#loading');
+	    if (loading) {
+	        // Only remove the spinner when everything is loaded
+	        loading.style.display = 'none'; // Hide the spinner immediately
+	    }
+
+	    // Initialize Flutter (your app logic)
+	    _flutter.loader.loadEntrypoint({
+	        serviceWorker: {
+	            serviceWorkerVersion: serviceWorkerVersion,
+	        },
+	        onEntrypointLoaded: function(engineInitializer) {
+	            engineInitializer.initializeEngine().then(function(appRunner) {
+	                appRunner.runApp();
+	            });
+	        }
+	    });
+	});
     </script>
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
