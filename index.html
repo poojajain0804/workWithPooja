@@ -70,6 +70,12 @@ section#about .about-text {
       line-height: 1.6;
     }
 
+section#about .about-img{
+	width: 40%;
+	 padding: 20px;
+	 align-items: center;
+	 
+}
 section#about p {
 	font-size: 1.1em;
 	color: #555;
@@ -173,8 +179,9 @@ footer p {
 
 .image-container img {
 	border-radius: 50%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.2);
 	max-width: 300px;
+	max-height: 400px;
 	transition: transform 0.3s ease;
 }
 
@@ -195,7 +202,7 @@ footer p {
 
 	<!-- About Section -->
 	<section id="about">
-		<img src="./icons/pooja_pink2.jpg" alt="Picture">
+		<div class ="about-img"><img src="./icons/pooja_pink2.jpg" alt="Picture"></div>
 		<div class="about-text">
 			<h2>About Me</h2>
 			<p>With over 12 years of experience in software development and
