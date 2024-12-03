@@ -168,13 +168,20 @@ footer p {
 	text-decoration: none;
 	font-size: 1.2em;
 	margin-top: 20px;
-	align-items: center; 
+	align-items : center; 
 	display: flex;
 }
 
 .cta-button:hover {
 	background-color: #e5533c;
 }
+.button-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 200px;            /* Set a height for the container */
+    border: 1px solid #000;   /* Optional, just to visualize the container */
+  }
 
 </style>
 </head>
@@ -183,8 +190,8 @@ footer p {
 	<!-- Header Section -->
 	<header>
 		<h1>Pooja Jain</h1>
-		<p>Pooja Jain - Project Manager, Certified Scrum Master and all
-			time Java Backend Developer | 12+ Years of Experience</p>
+		<p>Project Manager, Certified Scrum Master and all
+			time Java Backend Developer <br/> 12+ Years of Experience</p>
 	</header>
 
 
@@ -192,7 +199,7 @@ footer p {
 	<section id="about">
 		<div class ="about-img"><img src="./icons/pooja_pink2.jpg" alt="Picture"></div>
 		<div class="about-text">
-			<h2>About Me</h2>
+			<h2 align="center">About Me</h2>
 			<p>With over 12 years of experience in software development and
 				project management, I specialize in building scalable, efficient,
 				and high-performance Java backend systems. As a seasoned Java
@@ -201,9 +208,11 @@ footer p {
 				spans backend architecture, cloud computing, and agile
 				methodologies, enabling me to drive success in fast-paced
 				environments.</p>
-			<button
+			<div class="button-container">
+			<button 
 				onclick="window.location.href='mailto:workwithpoojajain@gmail.com'"
 				class="cta-button">Let's Connect</button>
+				</div>
 		</div>
 	</section>
 
