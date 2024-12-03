@@ -64,7 +64,7 @@ section#about img {
 
 /* Hover effect */
 section#about img:hover {
-	transform: scale(1.1); /* Slightly zooms the image on hover */
+	transform: scale(0.9); /* Slightly zooms the image on hover */
 	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
 }
 
@@ -73,6 +73,7 @@ section#about h2 {
 	color: #333;
 	align-items: center; 
 	margin-bottom: 20px;
+	display: flex;
 }
 
 section#about .about-text {
@@ -106,6 +107,20 @@ section#skills h2 {
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 30px;
+}
+
+.skill {
+	background-color: #333;
+	color: white;
+	padding: 15px;
+	border-radius: 8px;
+	width: 150px;
+	text-align: center;
+}
+
+.skill h3 {
+	margin-bottom: 10px;
+	font-size: 1.2em;
 }
 
 @media (max-width: 768px) {
@@ -154,6 +169,7 @@ footer p {
 	font-size: 1.2em;
 	margin-top: 20px;
 	align-items: center; 
+	display: flex;
 }
 
 .cta-button:hover {
