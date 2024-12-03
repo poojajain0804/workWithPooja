@@ -45,16 +45,30 @@ header p {
 }
 
 section#about {
-	background-color: #fff;
-	padding: 50px 20px;
-	text-align: center;
-}
+      display: flex; /* Use flexbox to align content horizontally */
+      justify-content: space-between; /* Distribute space between elements */
+      align-items: center; /* Vertically center the items */
+      padding: 20px;
+      gap: 20px; /* Space between the image and the text */
+      background-color: #fff;
+    }
+section#about img {
+      width: 40%; /* Image takes up 40% of the container */
+      border-radius: 50%; /* Optional: Makes the image circular */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow to the image */
+    }
 
 section#about h2 {
 	font-size: 2em;
 	color: #333;
 	margin-bottom: 20px;
 }
+section#about .about-text {
+      width: 55%; /* Text section takes up 55% of the container */
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
 
 section#about p {
 	font-size: 1.1em;
@@ -96,6 +110,21 @@ section#skills h2 {
 	font-size: 1.2em;
 }
 
+@media (max-width: 768px) {
+      #about {
+        flex-direction: column; /* Stack the elements vertically on smaller screens */
+        align-items: flex-start;
+      }
+	#about img {
+        width: 80%; /* Image will take up 80% width on small screens */
+        margin-bottom: 20px; /* Add space below the image */
+      }
+
+       #about .about-text {
+        width: 100%; /* Text section takes full width on small screens */
+      }
+    }
+
 footer {
 	background-color: #333;
 	color: white;
@@ -131,6 +160,27 @@ footer p {
 .cta-button:hover {
 	background-color: #e5533c;
 }
+
+.image-container {
+	text-align: center;
+	padding: 20px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+	transform: scale(1.1);
+}
+
+.image-container img {
+	border-radius: 50%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+	transform: rotate(15deg);
+}
 </style>
 </head>
 <body>
@@ -142,19 +192,24 @@ footer p {
 			time Java Backend Developer | 12+ Years of Experience</p>
 	</header>
 
+
 	<!-- About Section -->
 	<section id="about">
-		<h2>About Me</h2>
-		<p>With over 12 years of experience in software development and
-			project management, I specialize in building scalable, efficient, and
-			high-performance Java backend systems. As a seasoned Java developer
-			and team manager, I lead cross-functional teams to deliver innovative
-			solutions for enterprise-level applications. My expertise spans
-			backend architecture, cloud computing, and agile methodologies,
-			enabling me to drive success in fast-paced environments.</p>
-		<button
-			onclick="window.location.href='mailto:workwithpoojajain@gmail.com'"
-			class="cta-button">Let's Connect</button>
+		<img src="./icons/pooja_pink2.jpg" alt="Picture">
+		<div class="about-text">
+			<h2>About Me</h2>
+			<p>With over 12 years of experience in software development and
+				project management, I specialize in building scalable, efficient,
+				and high-performance Java backend systems. As a seasoned Java
+				developer and team manager, I lead cross-functional teams to deliver
+				innovative solutions for enterprise-level applications. My expertise
+				spans backend architecture, cloud computing, and agile
+				methodologies, enabling me to drive success in fast-paced
+				environments.</p>
+			<button
+				onclick="window.location.href='mailto:workwithpoojajain@gmail.com'"
+				class="cta-button">Let's Connect</button>
+		</div>
 	</section>
 
 	<!-- Skills Section -->
