@@ -55,7 +55,7 @@ section#about {
 
 section#about img {
 	width: 100%; /* Make the image responsive */
-	max-width: 400px; /* Add a max width to the image */
+	max-width: 250px; /* Add a max width to the image */
 	height: auto;
 	border-radius: 10%; /* Optional: Makes the image circular */
 	box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow to the image */
@@ -71,6 +71,7 @@ section#about img:hover {
 section#about h2 {
 	font-size: 2em;
 	color: #333;
+	align-items: center; 
 	margin-bottom: 20px;
 }
 
@@ -86,6 +87,25 @@ section#about p {
 	color: #555;
 	max-width: 800px;
 	margin: 0 auto 20px;
+}
+
+section#skills {
+	background-color: #f9f9f9;
+	padding: 50px 20px;
+	text-align: center;
+}
+
+section#skills h2 {
+	font-size: 2em;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.skills-list {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
 @media (max-width: 768px) {
@@ -133,6 +153,7 @@ footer p {
 	text-decoration: none;
 	font-size: 1.2em;
 	margin-top: 20px;
+	align-items: center; 
 }
 
 .cta-button:hover {
@@ -217,9 +238,6 @@ footer p {
 		</div>
 		<p>&copy; 2024 Pooja Jain. All rights reserved.</p>
 	</footer>
-
-	<!-- Font Awesome for social icons -->
-	<!--     <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 
 </body>
 </html>
